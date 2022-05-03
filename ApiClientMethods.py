@@ -18,15 +18,15 @@ def get_api_v1_admin(jwt='', body=None):
      return req.status_code, req.text
 
 
-def get_api_v1_hospital_hospital_id(jwt='', body=None, hospital_id=None):
-     url = 'http://127.0.0.1:5000/api/v1/hospital/' + hospital_id + ''
+def get_api_v1_hospital_hospital_id_department_department_id(jwt='', body=None, hospital_id=None, department_id=None):
+     url = 'http://127.0.0.1:5000/api/v1/hospital/' + hospital_id + '/department/' + department_id + ''
      headers = {'Authorization': 'Bearer ' + jwt}
      req = requests.get(url, headers=headers, json=body)
      return req.status_code, req.text
 
 
-def get_api_v1_hospital_hospital_id_department_department_id(jwt='', body=None, hospital_id=None, department_id=None):
-     url = 'http://127.0.0.1:5000/api/v1/hospital/' + hospital_id + '/department/' + department_id + ''
+def get_api_v1_hospital_hospital_id(jwt='', body=None, hospital_id=None):
+     url = 'http://127.0.0.1:5000/api/v1/hospital/' + hospital_id + ''
      headers = {'Authorization': 'Bearer ' + jwt}
      req = requests.get(url, headers=headers, json=body)
      return req.status_code, req.text

@@ -1,15 +1,17 @@
 import inspect
+import itertools
 import os
 import re
 import json
 from inspect import signature
 import copy
-import OpenApi as OpenApi
+#import OpenApi as OpenApi
 
 from ApiClientMethods import *
 from sampleData import *
 #from ApiParameters import *
 
+from itertools import combinations
 import sys
 sys.stdout = open('output.txt', 'w')
 
@@ -19,7 +21,6 @@ allFunctions = []
 listofDelete = []
 finalList = []
 allUsers = []
-params = []
 
 #Buscar totes les funcions al document apiClientMethods.py
 f = open ('apiClientMethods.py','r')
@@ -81,36 +82,45 @@ for user in users:
 
 #Login with all Users
 for u in allUsers:
-    print("****************************************************************************")
-    print("YOU HAVE LOGGED IN WITH " + u['username'])
-    print("****************************************************************************")
     code, body = funcioLogin(user=u)
     token = json.loads(body)
 
     for i, function in enumerate(finalList):
         if i != indexofLogin:
+            params = []
+            diffpam2 = []
+            final = []
+            combor = []
             funcio = globals()[function]
             args = inspect.getfullargspec(funcio)
+            total_args_id = args[0].__len__() - 2
             if "id" in function:
                 for i in args[0]:
                     if "id" in i:
                         p = i.replace("_id", "") + "s"
                         params.append(p)
-                for p in params:
-                    paramP = globals()[param]
-                    for p in paramP:
+                for i, x in enumerate(params):
+                    y = globals()[x]
+                    for h in y:
+                        diffpam2.append(h['id'])
+
+                for combo in combinations(diffpam2, total_args_id):
+                    combor = []
+                    for x in combo:
+                        combor.append(''.join([i for i in x if not i.isdigit()]))
+                    if len(combor) == len(set(combor)):
                         print(function)
-                        print(u)
-                    print(p)
-                    print(token['token'])
-                    code, body = funcio(token['token'], None, p['id'])
-                    print(str(code))
-                    print(body)
-                    print("-------------------------------------------------------")
+                        print(u['username'])
+                        print(combo)
+                        print(token['token'])
+                        code, body = funcio(token['token'], None, *combo)
+                        print(str(code))
+                        print(body)
+                        print("-------------------------------------------------------")
             else:
                 if (args[0].__len__() == 2) and (args[0][1] == "body"):
                     print(function)
-                    print(u)
+                    print(u['username'])
                     print(token['token'])
                     code, body = funcio(token['token'])
                     print(str(code))
@@ -121,7 +131,7 @@ for u in allUsers:
                     params = globals()[param]
                     for p in params:
                         print(function)
-                        print(u)
+                        print(u['username'])
                         print(p)
                         print(token['token'])
                         code, body = funcio(token['token'], p)
