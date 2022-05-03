@@ -1,0 +1,13 @@
+****************************************************************************
+YOU HAVE LOGGED IN WITH user1
+****************************************************************************
+get_api_v1_admin
+{'username': 'user1', 'password': 'user1'}
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUxODM5NTd9.VcRzGOipwaJ7iH1X5SiWwe4XFUr2BzhVQKkSIJw_-7s
+200
+{
+  "message": "You are not allowed to perform this action", 
+  "status_code": 200
+}
+
+-------------------------------------------------------
