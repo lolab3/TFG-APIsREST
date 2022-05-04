@@ -1,26 +1,22 @@
 import inspect
-import itertools
-import os
 import re
 import json
-from inspect import signature
-import copy
 #import OpenApi as OpenApi
 
 from ApiClientMethods import *
 from sampleData import *
-#from ApiParameters import *
 
 from itertools import combinations
-import sys
-sys.stdout = open('output.txt', 'w')
-
 
 Functions = []
 allFunctions = []
 listofDelete = []
 finalList = []
 allUsers = []
+
+data = {"functions": []}
+data_holder = data["functions"]
+
 
 #Buscar totes les funcions al document apiClientMethods.py
 f = open ('apiClientMethods.py','r')
@@ -109,34 +105,33 @@ for u in allUsers:
                     for x in combo:
                         combor.append(''.join([i for i in x if not i.isdigit()]))
                     if len(combor) == len(set(combor)):
-                        print(function)
-                        print(u['username'])
-                        print(combo)
-                        print(token['token'])
                         code, body = funcio(token['token'], None, *combo)
-                        print(str(code))
-                        print(body)
-                        print("-------------------------------------------------------")
+                        data_holder.append({'function': function,
+                                            'username': u['username'],
+                                            'parameters': combo,
+                                            'token': token['token'],
+                                            'code': str(code),
+                                            'body': body})
             else:
                 if (args[0].__len__() == 2) and (args[0][1] == "body"):
-                    print(function)
-                    print(u['username'])
-                    print(token['token'])
                     code, body = funcio(token['token'])
-                    print(str(code))
-                    print(body)
-                    print("-------------------------------------------------------")
+                    data_holder.append({'function': function,
+                                        'username': u['username'],
+                                        'parameters': None,
+                                        'token': token['token'],
+                                        'code': str(code),
+                                        'body': body})
                 else:
                     param = args[0][1] + "s"
                     params = globals()[param]
                     for p in params:
-                        print(function)
-                        print(u['username'])
-                        print(p)
-                        print(token['token'])
                         code, body = funcio(token['token'], p)
-                        print(str(code))
-                        print(body)
-                        print("-------------------------------------------------------")
+                        data_holder.append({'function': function,
+                                            'username': u['username'],
+                                            'parameters': p['id'],
+                                            'token': token['token'],
+                                            'code': str(code),
+                                            'body': body})
 
-sys.stdout.close()
+with open('data.json', 'w', encoding='utf-8') as f:
+    json.dump(data_holder, f, ensure_ascii=False, indent=4)

@@ -1,0 +1,584 @@
+[
+    {
+        "function": "get_api_v1_admin",
+        "username": "user1",
+        "parameters": null,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "200",
+        "body": "{\n  \"message\": \"You are not allowed to perform this action\", \n  \"status_code\": 200\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user1",
+        "parameters": [
+            "hospital1",
+            "department1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "200",
+        "body": "{\n  \"id\": \"department1\", \n  \"location\": \"building1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user1",
+        "parameters": [
+            "hospital1",
+            "department2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "200",
+        "body": "{\n  \"id\": \"department2\", \n  \"location\": \"building2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user1",
+        "parameters": [
+            "hospital2",
+            "department1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "404",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Not Found\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user1",
+        "parameters": [
+            "hospital2",
+            "department2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "404",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Not Found\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id",
+        "username": "user1",
+        "parameters": [
+            "hospital1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "200",
+        "body": "{\n  \"address\": \"fake street 1\", \n  \"departments\": [\n    {\n      \"id\": \"department1\", \n      \"location\": \"building1\"\n    }, \n    {\n      \"id\": \"department2\", \n      \"location\": \"building2\"\n    }\n  ], \n  \"id\": \"hospital1\", \n  \"name\": \"hospital1\", \n  \"phone\": \"555-55-55-55\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id",
+        "username": "user1",
+        "parameters": [
+            "hospital2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "200",
+        "body": "{\n  \"address\": \"fake street 2\", \n  \"departments\": [], \n  \"id\": \"hospital2\", \n  \"name\": \"hospital2\", \n  \"phone\": \"555-55-55-55\"\n}\n"
+    },
+    {
+        "function": "post_api_v1_patient",
+        "username": "user1",
+        "parameters": "patient1",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "post_api_v1_patient",
+        "username": "user1",
+        "parameters": "patient2",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "put_api_v1_patient",
+        "username": "user1",
+        "parameters": "patient1",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "put_api_v1_patient",
+        "username": "user1",
+        "parameters": "patient2",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "delete_api_v1_patient_patient_id",
+        "username": "user1",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "delete_api_v1_patient_patient_id",
+        "username": "user1",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id",
+        "username": "user1",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id",
+        "username": "user1",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id_sensitive",
+        "username": "user1",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id_sensitive",
+        "username": "user1",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user1",
+        "parameters": [
+            "user1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user1",
+        "parameters": [
+            "user2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user1",
+        "parameters": [
+            "user3"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjEiLCJleHAiOjE2NTUyMjM1Nzl9.cenXtKBwFE1eaPrzDk8JXWQk0dQabfL2aZLO9UR6Gqw",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_admin",
+        "username": "user2",
+        "parameters": null,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"message\": \"You are not allowed to perform this action\", \n  \"status_code\": 200\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user2",
+        "parameters": [
+            "hospital1",
+            "department1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"department1\", \n  \"location\": \"building1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user2",
+        "parameters": [
+            "hospital1",
+            "department2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"department2\", \n  \"location\": \"building2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user2",
+        "parameters": [
+            "hospital2",
+            "department1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "404",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Not Found\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user2",
+        "parameters": [
+            "hospital2",
+            "department2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "404",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Not Found\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id",
+        "username": "user2",
+        "parameters": [
+            "hospital1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"address\": \"fake street 1\", \n  \"departments\": [\n    {\n      \"id\": \"department1\", \n      \"location\": \"building1\"\n    }, \n    {\n      \"id\": \"department2\", \n      \"location\": \"building2\"\n    }\n  ], \n  \"id\": \"hospital1\", \n  \"name\": \"hospital1\", \n  \"phone\": \"555-55-55-55\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id",
+        "username": "user2",
+        "parameters": [
+            "hospital2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"address\": \"fake street 2\", \n  \"departments\": [], \n  \"id\": \"hospital2\", \n  \"name\": \"hospital2\", \n  \"phone\": \"555-55-55-55\"\n}\n"
+    },
+    {
+        "function": "post_api_v1_patient",
+        "username": "user2",
+        "parameters": "patient1",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{}\n"
+    },
+    {
+        "function": "post_api_v1_patient",
+        "username": "user2",
+        "parameters": "patient2",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{}\n"
+    },
+    {
+        "function": "put_api_v1_patient",
+        "username": "user2",
+        "parameters": "patient1",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{}\n"
+    },
+    {
+        "function": "put_api_v1_patient",
+        "username": "user2",
+        "parameters": "patient2",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{}\n"
+    },
+    {
+        "function": "delete_api_v1_patient_patient_id",
+        "username": "user2",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"message\": \"Ok\", \n  \"status_code\": 200\n}\n"
+    },
+    {
+        "function": "delete_api_v1_patient_patient_id",
+        "username": "user2",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"message\": \"Ok\", \n  \"status_code\": 200\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id",
+        "username": "user2",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"patient1\", \n  \"name\": \"patient1\", \n  \"surname\": \"patient1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id",
+        "username": "user2",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"patient2\", \n  \"name\": \"patient2\", \n  \"surname\": \"patient2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id_sensitive",
+        "username": "user2",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"patient1\", \n  \"name\": \"patient1\", \n  \"sensitive_data\": \"illness1\", \n  \"surname\": \"patient1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id_sensitive",
+        "username": "user2",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"patient2\", \n  \"name\": \"patient2\", \n  \"sensitive_data\": \"illness2\", \n  \"surname\": \"patient2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user2",
+        "parameters": [
+            "user1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"user1\", \n  \"mail\": \"user1@local.com\", \n  \"username\": \"user1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user2",
+        "parameters": [
+            "user2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"user2\", \n  \"mail\": \"user2@local.com\", \n  \"username\": \"user2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user2",
+        "parameters": [
+            "user3"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjIiLCJleHAiOjE2NTUyMjM1Nzl9.__AtfSRRiXFEuuAkKkN5czXJIg8TqrAZIw3Hl8uGBEs",
+        "code": "200",
+        "body": "{\n  \"id\": \"user3\", \n  \"mail\": \"user3@local.com\", \n  \"username\": \"user3\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_admin",
+        "username": "user3",
+        "parameters": null,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"message\": \"You are not allowed to perform this action\", \n  \"status_code\": 200\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user3",
+        "parameters": [
+            "hospital1",
+            "department1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"id\": \"department1\", \n  \"location\": \"building1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user3",
+        "parameters": [
+            "hospital1",
+            "department2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"id\": \"department2\", \n  \"location\": \"building2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user3",
+        "parameters": [
+            "hospital2",
+            "department1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "404",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Not Found\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id_department_department_id",
+        "username": "user3",
+        "parameters": [
+            "hospital2",
+            "department2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "404",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Not Found\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id",
+        "username": "user3",
+        "parameters": [
+            "hospital1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"address\": \"fake street 1\", \n  \"departments\": [\n    {\n      \"id\": \"department1\", \n      \"location\": \"building1\"\n    }, \n    {\n      \"id\": \"department2\", \n      \"location\": \"building2\"\n    }\n  ], \n  \"id\": \"hospital1\", \n  \"name\": \"hospital1\", \n  \"phone\": \"555-55-55-55\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_hospital_hospital_id",
+        "username": "user3",
+        "parameters": [
+            "hospital2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"address\": \"fake street 2\", \n  \"departments\": [], \n  \"id\": \"hospital2\", \n  \"name\": \"hospital2\", \n  \"phone\": \"555-55-55-55\"\n}\n"
+    },
+    {
+        "function": "post_api_v1_patient",
+        "username": "user3",
+        "parameters": "patient1",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "post_api_v1_patient",
+        "username": "user3",
+        "parameters": "patient2",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "put_api_v1_patient",
+        "username": "user3",
+        "parameters": "patient1",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "put_api_v1_patient",
+        "username": "user3",
+        "parameters": "patient2",
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "delete_api_v1_patient_patient_id",
+        "username": "user3",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"message\": \"Ok\", \n  \"status_code\": 200\n}\n"
+    },
+    {
+        "function": "delete_api_v1_patient_patient_id",
+        "username": "user3",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"message\": \"Ok\", \n  \"status_code\": 200\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id",
+        "username": "user3",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"id\": \"patient1\", \n  \"name\": \"patient1\", \n  \"surname\": \"patient1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id",
+        "username": "user3",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"id\": \"patient2\", \n  \"name\": \"patient2\", \n  \"surname\": \"patient2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id_sensitive",
+        "username": "user3",
+        "parameters": [
+            "patient1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_patient_patient_id_sensitive",
+        "username": "user3",
+        "parameters": [
+            "patient2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "401",
+        "body": "{\n  \"detail\": {}, \n  \"message\": \"Unauthorized\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user3",
+        "parameters": [
+            "user1"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"id\": \"user1\", \n  \"mail\": \"user1@local.com\", \n  \"username\": \"user1\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user3",
+        "parameters": [
+            "user2"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"id\": \"user2\", \n  \"mail\": \"user2@local.com\", \n  \"username\": \"user2\"\n}\n"
+    },
+    {
+        "function": "get_api_v1_user_user_id",
+        "username": "user3",
+        "parameters": [
+            "user3"
+        ],
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoidXNlcjMiLCJleHAiOjE2NTUyMjM1Nzl9.Z7_utcUarOZZ4EdqiGhAYfk0ncVrgzRkc-lNEynVmpk",
+        "code": "200",
+        "body": "{\n  \"id\": \"user3\", \n  \"mail\": \"user3@local.com\", \n  \"username\": \"user3\"\n}\n"
+    }
+]
