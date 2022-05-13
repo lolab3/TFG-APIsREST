@@ -8,8 +8,8 @@ user1 = [
         "delete_api_v1_patient_patient_id": [{"parameters": ["patient"]}, {"response": "200"},],
         "get_api_v1_patient_patient_id": [{"parameters": ["patient"]}, {"response": "200"},],
         "get_api_v1_patient_patient_id_sensitive": [{"parameters": ["patient"]}, {"response": "200"},],
-        "get_api_v1_user_user_id": [{"parameters": ["user"]}, {"response": "200"}, ],
-        "get_api_v1_hospital_hospital_id": [{"parameters": ["hospital"]}, {"response": "200"}, ],
+        "get_api_v1_user_user_id": [{"parameters": ["user1"]}, {"response": "200"}, ],
+        "get_api_v1_user_user_id": [{"parameters": ["user2"]}, {"response": "400"}, ],
 
     },
 ]
