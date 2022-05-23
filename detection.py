@@ -15,8 +15,7 @@ for u in users:
                     for b in c:
                         if par == info['function']:
                             if info["parameters"] == b["parameters"]:
-                                print("Function " + info["function"] + " with parameters " + str(info["parameters"]))
                                 if info["code"] == b["response"]:
-                                    print("The function has the correct code: " + b["response"])
-                                else: print("The function has the code " + info["code"] + " and it had to be a " + b["response"])
+                                    print("The function " + info["function"] + " with parameters " + str(info["parameters"]) + " has the correct code: " + b["response"] + ".")
+                                else: print("The function " + info["function"] + " with parameters " + str(info["parameters"]) + " has the code " + info["code"] + " and it had to be a " + b["response"] + ".")
                                 break
