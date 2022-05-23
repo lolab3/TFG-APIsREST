@@ -5,14 +5,18 @@ from example import *
 with open('data.json') as json_file:
     data = json.load(json_file)
 
-for info in data:
-    for func in user1:
-        for inside in func:
-            # for parameters --> print(func[inside][0]["parameters"])
-            if inside == info['function']:
-                print("Function " + info["function"] + " with parameters " + str(info["parameters"]))
-                if info["code"] == func[inside][1]["response"]:
-                    print("The function has ended successfully")
-                else: print("The function has an error")
-                break
-
+for u in users:
+    print(u + "'s CHECK")
+    x = globals()[u]
+    for info in data:
+        if info["username"] == u:
+            for inside in x:
+                for par,c in inside.items():
+                    for b in c:
+                        if par == info['function']:
+                            if info["parameters"] == b["parameters"]:
+                                print("Function " + info["function"] + " with parameters " + str(info["parameters"]))
+                                if info["code"] == b["response"]:
+                                    print("The function has the correct code: " + b["response"])
+                                else: print("The function has the code " + info["code"] + " and it had to be a " + b["response"])
+                                break
