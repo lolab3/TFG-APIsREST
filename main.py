@@ -5,7 +5,6 @@ import json
 
 from ApiClientMethods import *
 from sampleData import *
-
 from itertools import combinations
 
 Functions = []
