@@ -5,7 +5,7 @@ from example import *
 with open('data.json') as json_file:
     data = json.load(json_file)
 
-for u in users:
+for u in users_detection:
     x = globals()[u]
     for info in data:
         if info["username"] == u:

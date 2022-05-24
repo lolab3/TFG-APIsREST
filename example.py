@@ -1,4 +1,4 @@
-users = ['user1', 'user2']
+users_detection = ['user1', 'user2']
 user1 = {
         "get_api_v1_admin": [{"parameters": None, "response": "200"}],
         "get_api_v1_hospital_hospital_id_department_department_id": [{"parameters": ["hospital1","department1"], "response": "200" },
