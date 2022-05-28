@@ -99,13 +99,13 @@ table tr:hover td {
 #red {
     width:2px;
     height:2px;
-    background:red;
+    background:#FF0000;
     border-radius:1px;
 }
 
 #green {
     width:2px;
     height:2px;
-    background:green;
+    background:#7CFC00;
     border-radius:1px;
 }
