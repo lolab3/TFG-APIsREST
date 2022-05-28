@@ -46,7 +46,7 @@ for u in users_detection:
                                                 <td>""" + info["code"] + """</td>
                                                 <td>""" + b["message"] + """</td>
                                                 <td>True</td>
-                                                <td id="green"></td>
+                                                <td id="green">GOOD</td>
                                             </tr>"""
                                         else:
                                             mensaje = mensaje + """
@@ -58,7 +58,7 @@ for u in users_detection:
                                                 <td>""" + info["code"] + """</td>
                                                 <td>""" + b["message"] + """</td>
                                                 <td>False</td>
-                                                <td id="red"></td>
+                                                <td id="red">BAD</td>
                                             </tr>"""
                                     else:
                                         mensaje = mensaje + """
@@ -70,7 +70,7 @@ for u in users_detection:
                                             <td>""" + info["code"] + """</td>
                                             <td>---</td>
                                             <td>---</td>
-                                            <td id="green"></td>
+                                            <td id="green">GOOD</td>
                                         </tr>"""
                                 else:
                                     if "message" in b and "body" in info:
@@ -84,7 +84,7 @@ for u in users_detection:
                                                 <td>""" + info["code"] + """</td>
                                                 <td>""" + b["message"] + """</td>
                                                 <td>True</td>
-                                                <td id="red"></td>
+                                                <td id="red">BAD</td>
                                             </tr>"""
                                         else:
                                             mensaje = mensaje + """
@@ -96,7 +96,7 @@ for u in users_detection:
                                                 <td>""" + info["code"] + """</td>
                                                 <td>""" + b["message"] + """</td>
                                                 <td>False</td>
-                                                <td id="red"></td>
+                                                <td id="red">BAD</td>
                                             </tr>"""
                                     else:
                                         mensaje = mensaje + """
@@ -108,7 +108,7 @@ for u in users_detection:
                                             <td>""" + info["code"] + """</td>
                                             <td>---</td>
                                             <td>---</td>
-                                            <td id="red"></td>
+                                            <td id="red">BAD</td>
                                         </tr>"""
                                 break
 

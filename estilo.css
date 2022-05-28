@@ -101,6 +101,8 @@ table tr:hover td {
     height:2px;
     background:#FF0000;
     border-radius:1px;
+    color:black;
+    text-shadow: 0px 0px 0px black;
 }
 
 #green {
@@ -108,4 +110,6 @@ table tr:hover td {
     height:2px;
     background:#7CFC00;
     border-radius:1px;
+    color:black;
+    text-shadow: 0px 0px 0px black;
 }
