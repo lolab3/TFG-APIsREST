@@ -15,7 +15,7 @@ mensaje = """<html>
     <th>EXPECTED CODE</th>
     <th>RESULT CODE </th>
     <th>CHECK IF BODY CONTAINS</th>
-    <th>DOES IT CONTAIN IT?</th>
+    <th>DOES THE BODY CONTAIN IT?</th>
     <th>RESULT</th>
   </tr> """
 
