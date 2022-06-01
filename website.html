@@ -1,234 +1,234 @@
 <html>
-<head><link rel="stylesheet" type="text/css" href="estilo.css"></head>
-<body><table class="detection" id="detection">
-  <tr>
-    <th>USER</th>
-    <th>FUNCTION</th>
-    <th>PARAMETERS</th>
-    <th>EXPECTED CODE</th>
-    <th>RESULT CODE </th>
-    <th>CHECK IF BODY CONTAINS</th>
-    <th>DOES THE BODY CONTAIN IT?</th>
-    <th>RESULT</th>
-  </tr> 
+    <head><link rel="stylesheet" type="text/css" href="estilo.css"></head>
+    <body><table class="detection" id="detection">
+      <tr>
+        <th>USER</th>
+        <th>FUNCTION</th>
+        <th>PARAMETERS</th>
+        <th>EXPECTED CODE</th>
+        <th>RESULT CODE </th>
+        <th>CHECK IF BODY CONTAINS</th>
+        <th>DOES THE BODY CONTAIN IT?</th>
+        <th>RESULT</th>
+      </tr> 
+                                                <tr>
+                                                    <td>user1</td>
+                                                    <td>get_api_v1_admin</td>
+                                                    <td>None</td>
+                                                    <td>401</td>
+                                                    <td>200</td>
+                                                    <td>not allowed</td>
+                                                    <td>True</td>
+                                                    <td id="red">BAD</td>
+                                                </tr>
                                             <tr>
                                                 <td>user1</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital1', 'department1']</td>
+                                                <td>200</td>
+                                                <td>200</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital1', 'department2']</td>
+                                                <td>200</td>
+                                                <td>200</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital2', 'department1']</td>
+                                                <td>404</td>
+                                                <td>404</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital2', 'department2']</td>
+                                                <td>404</td>
+                                                <td>404</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_hospital_hospital_id</td>
+                                                <td>['hospital1']</td>
+                                                <td>200</td>
+                                                <td>200</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_hospital_hospital_id</td>
+                                                <td>['hospital2']</td>
+                                                <td>200</td>
+                                                <td>200</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                                <tr>
+                                                    <td>user1</td>
+                                                    <td>post_api_v1_patient</td>
+                                                    <td>patient1</td>
+                                                    <td>200</td>
+                                                    <td>401</td>
+                                                    <td>Unauthorized</td>
+                                                    <td>True</td>
+                                                    <td id="red">BAD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>user1</td>
+                                                    <td>post_api_v1_patient</td>
+                                                    <td>patient2</td>
+                                                    <td>401</td>
+                                                    <td>401</td>
+                                                    <td>Unauthorized</td>
+                                                    <td>True</td>
+                                                    <td id="green">GOOD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>user1</td>
+                                                    <td>put_api_v1_patient</td>
+                                                    <td>patient1</td>
+                                                    <td>200</td>
+                                                    <td>401</td>
+                                                    <td>Unauthorized</td>
+                                                    <td>True</td>
+                                                    <td id="red">BAD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>user1</td>
+                                                    <td>put_api_v1_patient</td>
+                                                    <td>patient2</td>
+                                                    <td>401</td>
+                                                    <td>401</td>
+                                                    <td>Unauthorized</td>
+                                                    <td>True</td>
+                                                    <td id="green">GOOD</td>
+                                                </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>delete_api_v1_patient_patient_id</td>
+                                                <td>['patient1']</td>
+                                                <td>200</td>
+                                                <td>401</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="red">BAD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>delete_api_v1_patient_patient_id</td>
+                                                <td>['patient2']</td>
+                                                <td>200</td>
+                                                <td>401</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="red">BAD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_patient_patient_id</td>
+                                                <td>['patient1']</td>
+                                                <td>200</td>
+                                                <td>401</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="red">BAD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_patient_patient_id_sensitive</td>
+                                                <td>['patient2']</td>
+                                                <td>200</td>
+                                                <td>401</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="red">BAD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_user_user_id</td>
+                                                <td>['user1']</td>
+                                                <td>200</td>
+                                                <td>401</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="red">BAD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user1</td>
+                                                <td>get_api_v1_user_user_id</td>
+                                                <td>['user2']</td>
+                                                <td>401</td>
+                                                <td>401</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user2</td>
                                                 <td>get_api_v1_admin</td>
                                                 <td>None</td>
-                                                <td>401</td>
                                                 <td>200</td>
-                                                <td>not allowed</td>
-                                                <td>True</td>
-                                                <td id="red">BAD</td>
-                                            </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital1', 'department1']</td>
-                                            <td>200</td>
-                                            <td>200</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital1', 'department2']</td>
-                                            <td>200</td>
-                                            <td>200</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital2', 'department1']</td>
-                                            <td>404</td>
-                                            <td>404</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital2', 'department2']</td>
-                                            <td>404</td>
-                                            <td>404</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_hospital_hospital_id</td>
-                                            <td>['hospital1']</td>
-                                            <td>200</td>
-                                            <td>200</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_hospital_hospital_id</td>
-                                            <td>['hospital2']</td>
-                                            <td>200</td>
-                                            <td>200</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                            <tr>
-                                                <td>user1</td>
-                                                <td>post_api_v1_patient</td>
-                                                <td>patient1</td>
                                                 <td>200</td>
-                                                <td>401</td>
-                                                <td>Unauthorized</td>
-                                                <td>True</td>
-                                                <td id="red">BAD</td>
-                                            </tr>
-                                            <tr>
-                                                <td>user1</td>
-                                                <td>post_api_v1_patient</td>
-                                                <td>patient2</td>
-                                                <td>401</td>
-                                                <td>401</td>
-                                                <td>Unauthorized</td>
-                                                <td>True</td>
+                                                <td>---</td>
+                                                <td>---</td>
                                                 <td id="green">GOOD</td>
                                             </tr>
                                             <tr>
-                                                <td>user1</td>
-                                                <td>put_api_v1_patient</td>
-                                                <td>patient1</td>
+                                                <td>user2</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital1', 'department1']</td>
                                                 <td>200</td>
-                                                <td>401</td>
-                                                <td>Unauthorized</td>
-                                                <td>True</td>
-                                                <td id="red">BAD</td>
-                                            </tr>
-                                            <tr>
-                                                <td>user1</td>
-                                                <td>put_api_v1_patient</td>
-                                                <td>patient2</td>
-                                                <td>401</td>
-                                                <td>401</td>
-                                                <td>Unauthorized</td>
-                                                <td>True</td>
+                                                <td>200</td>
+                                                <td>---</td>
+                                                <td>---</td>
                                                 <td id="green">GOOD</td>
                                             </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>delete_api_v1_patient_patient_id</td>
-                                            <td>['patient1']</td>
-                                            <td>200</td>
-                                            <td>401</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="red">BAD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>delete_api_v1_patient_patient_id</td>
-                                            <td>['patient2']</td>
-                                            <td>200</td>
-                                            <td>401</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="red">BAD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_patient_patient_id</td>
-                                            <td>['patient1']</td>
-                                            <td>200</td>
-                                            <td>401</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="red">BAD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_patient_patient_id_sensitive</td>
-                                            <td>['patient2']</td>
-                                            <td>200</td>
-                                            <td>401</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="red">BAD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_user_user_id</td>
-                                            <td>['user1']</td>
-                                            <td>200</td>
-                                            <td>401</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="red">BAD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user1</td>
-                                            <td>get_api_v1_user_user_id</td>
-                                            <td>['user2']</td>
-                                            <td>401</td>
-                                            <td>401</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user2</td>
-                                            <td>get_api_v1_admin</td>
-                                            <td>None</td>
-                                            <td>200</td>
-                                            <td>200</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user2</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital1', 'department1']</td>
-                                            <td>200</td>
-                                            <td>200</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user2</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital1', 'department2']</td>
-                                            <td>200</td>
-                                            <td>200</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user2</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital2', 'department1']</td>
-                                            <td>404</td>
-                                            <td>404</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr>
-                                        <tr>
-                                            <td>user2</td>
-                                            <td>get_api_v1_hospital_hospital_id_department_department_id</td>
-                                            <td>['hospital2', 'department2']</td>
-                                            <td>404</td>
-                                            <td>404</td>
-                                            <td>---</td>
-                                            <td>---</td>
-                                            <td id="green">GOOD</td>
-                                        </tr> </table> </body>
-</html> 
+                                            <tr>
+                                                <td>user2</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital1', 'department2']</td>
+                                                <td>200</td>
+                                                <td>200</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user2</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital2', 'department1']</td>
+                                                <td>404</td>
+                                                <td>404</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>user2</td>
+                                                <td>get_api_v1_hospital_hospital_id_department_department_id</td>
+                                                <td>['hospital2', 'department2']</td>
+                                                <td>404</td>
+                                                <td>404</td>
+                                                <td>---</td>
+                                                <td>---</td>
+                                                <td id="green">GOOD</td>
+                                            </tr> </table> </body>
+    </html> 
