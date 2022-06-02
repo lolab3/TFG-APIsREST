@@ -79,7 +79,7 @@ def scanAPI(inputFile, outputFile):
 
     #Login with all Users
     for u in allUsers:
-        code, body = funcioLogin(user=u)
+        code, body = funcioLogin('', u)
         token = json.loads(body)
 
         for i, function in enumerate(finalList):
