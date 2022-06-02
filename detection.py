@@ -4,7 +4,7 @@ import webbrowser
 #TO CALL TEXT FROM example.py
 from detectionData import *
 
-def detection(outputWebsite):
+def detection(inputFile, outputWebsite):
     f = open(outputWebsite,'w')
 
     mensaje = """<html>
@@ -24,7 +24,7 @@ def detection(outputWebsite):
 
 
 
-    with open('data.json') as json_file:
+    with open(inputFile) as json_file:
         data = json.load(json_file)
 
     for u in users_detection:
@@ -121,4 +121,4 @@ def detection(outputWebsite):
 
     webbrowser.open_new_tab(outputWebsite)
 
-detection('website.html')
+detection('data.json', 'website.html')

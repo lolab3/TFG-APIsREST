@@ -100,19 +100,23 @@ def scanAPI(inputFile, outputFile):
                         y = globals()[x]
                         for h in y:
                             diffpam2.append(h['id'])
-
+                    Final = []
                     for combo in combinations(diffpam2, total_args_id):
                         combor = []
                         for x in combo:
                             combor.append(''.join([i for i in x if not i.isdigit()]))
                         if len(combor) == len(set(combor)):
-                            code, body = funcio(token['token'], None, *combo)
-                            data_holder.append({'function': function,
-                                                'username': u['username'],
-                                                'parameters': combo,
-                                                'token': token['token'],
-                                                'code': str(code),
-                                                'body': body})
+                            Final.append(combo)
+
+                    Final = sorted(list(set(Final)))
+                    for ff in Final:
+                        code, body = funcio(token['token'], None, *ff)
+                        data_holder.append({'function': function,
+                                            'username': u['username'],
+                                            'parameters': ff,
+                                            'token': token['token'],
+                                            'code': str(code),
+                                            'body': body})
                 else:
                     if (args[0].__len__() == 2) and (args[0][1] == "body"):
                         code, body = funcio(token['token'])
