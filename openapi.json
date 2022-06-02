@@ -1,6 +1,17 @@
 {
   "components": {
     "schemas": {
+      "DepartmentOut": {
+        "properties": {
+          "id": {
+            "type": "string"
+          }, 
+          "location": {
+            "type": "string"
+          }
+        }, 
+        "type": "object"
+      }, 
       "HTTPError": {
         "properties": {
           "detail": {
@@ -16,6 +27,12 @@
         "properties": {
           "address": {
             "type": "string"
+          }, 
+          "departments": {
+            "items": {
+              "$ref": "#/components/schemas/DepartmentOut"
+            }, 
+            "type": "array"
           }, 
           "id": {
             "type": "string"
@@ -217,9 +234,18 @@
         "summary": "Get Admin V1"
       }
     }, 
-    "/api/v1/hospital": {
+    "/api/v1/hospital/{hospital_id}": {
       "get": {
-        "parameters": [], 
+        "parameters": [
+          {
+            "in": "path", 
+            "name": "hospital_id", 
+            "required": true, 
+            "schema": {
+              "type": "string"
+            }
+          }
+        ], 
         "responses": {
           "200": {
             "content": {
@@ -230,9 +256,64 @@
               }
             }, 
             "description": "Successful response"
+          }, 
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPError"
+                }
+              }
+            }, 
+            "description": "Not found"
           }
         }, 
         "summary": "Get Hospital V1"
+      }
+    }, 
+    "/api/v1/hospital/{hospital_id}/department/{department_id}": {
+      "get": {
+        "parameters": [
+          {
+            "in": "path", 
+            "name": "hospital_id", 
+            "required": true, 
+            "schema": {
+              "type": "string"
+            }
+          }, 
+          {
+            "in": "path", 
+            "name": "department_id", 
+            "required": true, 
+            "schema": {
+              "type": "string"
+            }
+          }
+        ], 
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DepartmentOut"
+                }
+              }
+            }, 
+            "description": "Successful response"
+          }, 
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPError"
+                }
+              }
+            }, 
+            "description": "Not found"
+          }
+        }, 
+        "summary": "Get Department V1"
       }
     }, 
     "/api/v1/patient": {
@@ -270,9 +351,77 @@
           }
         }, 
         "summary": "Post Patient"
+      }, 
+      "put": {
+        "parameters": [], 
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatientInUpdate"
+              }
+            }
+          }
+        }, 
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PatientOut"
+                }
+              }
+            }, 
+            "description": "Successful response"
+          }, 
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationError"
+                }
+              }
+            }, 
+            "description": "Validation error"
+          }
+        }, 
+        "summary": "Put Patient"
       }
     }, 
     "/api/v1/patient/{patient_id}": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "path", 
+            "name": "patient_id", 
+            "required": true, 
+            "schema": {
+              "type": "string"
+            }
+          }
+        ], 
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }, 
+            "description": "Successful response"
+          }, 
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPError"
+                }
+              }
+            }, 
+            "description": "Not found"
+          }
+        }, 
+        "summary": "Delete Patient"
+      }, 
       "get": {
         "parameters": [
           {

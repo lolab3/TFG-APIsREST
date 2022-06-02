@@ -141,4 +141,4 @@ def scanAPI(inputFile, outputFile):
     with open(outputFile, 'w', encoding='utf-8') as f:
         json.dump(data_holder, f, ensure_ascii=False, indent=4)
 
-scanAPI('apiClientMethods.py', 'data.json')
+scanAPI('ApiClientMethods.py', 'data.json')
