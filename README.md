@@ -19,6 +19,8 @@ El codi conté els següents requeriments:
 El programari es dividirà en 3 parts (tres arxius amb diferents propòsits), com es pot veure a la figura següent. I, pot ser cridat des d'un script, anomenat “main.py”, que crida a cadascun dels scripts mostrats: 
 
 
+![alt text](https://github.com/lolab3/TFG-APIsREST/blob/main/diagrama_codigo.jpg)[Esquema del codi sencer]
+
 - **methodsGenerator.py**: crea les diferents funcions necessàries per a accedir a tots els endpoints d'una API de REST.
 - **scanAPI.py**: crida a totes aquestes funcions esmentades anteriorment.
 - **detection.py**: compara el resultat obtingut amb l'esperat.
