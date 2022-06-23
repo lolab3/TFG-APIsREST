@@ -1,6 +1,7 @@
 # TFG: Automatització del procés de penetration testing sobre les APIs REST
 ### Lola Barberan Baeta (NIU: 1532874)
 
+## Resum
 Una API de REST és el conjunt de definicions i protocols que es fan servir per a dissenyar i integrar el programari de les aplicacions, seguint les regles d'arquitectura específiques de REST. Aquest projecte se centrarà en el descobriment de vulnerabilitats explotables a aquest tipus d'APIs, concretament en les d'escalada de privilegis horitzontals, on l’usuari maliciós manté els privilegis que ja tenia, però aconsegueix tenir accés a dades i funcionalitats que no haurien d’estar disponibles per a aquest, i verticals, on l’usuari té pocs privilegis i passa a tenir més. Si es volgués realitzar aquest procés de forma manual a una API amb molt contingut, seria una pèrdua de temps molt costosa. Per tant, l'objectiu d'aquest TFG és el d'obtenir una eina que permeti la detecció automàtica de les vulnerabilitats d'escalada de privilegis horitzontals i verticals a qualsevol mena d'API de REST. 
 
 ## Requeriments
